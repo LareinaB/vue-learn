@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <!--bootstrap栅格化工具 默认12列（有的框架可能是24列）-->
+    <!--常见样式 基本样式+增强样式-->
+    <!--常见颜色-->
+    <!--default 灰色 success 绿色 danger 红色 warning 警告色 info 浅蓝色 primary 蓝色-->
+    <!--vue的ui框架 iview mintui elementui-->
+    <div class="container">
+        <!--每行有12列-->
+        <div class="row">
+            <table class="table table-hover table-bordered">
+                <!--<caption class="h2 text-warning text-center">购物车</caption>-->
+                <tr>
+                    <!--click点击时 CheckBox的状态还没有改变 所以拿到的总是原来的 -->
+                    <!--change可以保证值变化后再触发-->
+                    <th>全选 <input type="checkbox" v-model="selectAll"></th>
+                    <td>商品</td>
+                    <td>单价</td>
+                    <td>数量</td>
+                    <td>小计</td>
+                    <td>操作</td>
+                </tr>
+                <tr v-for="(product, index) in products">
+                    <td><input type="checkbox" v-model="product.isSelected"></td>
+                    <td>
+                        <img :src="product.productCover" :title="product.productName">
+                        {{product.productInfo}}
+                    </td>
+                    <td> $ {{product.productPrice}}</td>
+                    <td>
+                        <!--v-model.number让输入框的值变为数字类型 .lazy当输入框失去焦点时更新数据-->
+                        <input type="number" v-model.number="product.productCount">
+                    </td>
+                    <td>
+                        <!--过滤器 原数据不变的情况下，改变显示效果 管道符-->
+                        {{product.productPrice * product.productCount | toFixed}}
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" @click="remove(product)">删除</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <!--数据一变化就会重新调用此函数 不会缓存上一次的结果-->
+                        总计：{{sum | toFixed}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<!--基于promise的-->
+<script src="../node_modules/axios/dist/axios.js"></script>
+<script src="promise-ajax.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        // 当给全选赋值时，要影响其他数据的变化，当页面刷新时，
+        // 获取全选值是根据下面的CheckBox计算出来的结果给全选赋值
+
+        filters: {
+            toFixed(input) { //this ->window input->管道符前面的数据
+                return '$' + input.toFixed(2);
+            }
+        },
+        // 用来发送ajax
+        created() { // 数据初始化之后调用 this指向vm实例 钩子函数
+            this.getData();
+        },
+        computed: { // 这里的数据也会放在vm上，不能和data中数据重名
+            selectAll: { // 是否全选 是一开始就计算出来的
+                get() { // this依然指向实例
+                    // 默认v-model会调用selectAll的值，所以会调用get方法
+                    return this.products.every(item => item.isSelected);
+                },
+                set(val) {
+                    // 给checkbox赋值的时候 此时就不需要给每一项绑定事件了
+                    this.products.forEach(p => p.isSelected = val);
+                },
+            },
+//                sum: { // 获取sum的时候就调用他的get方法
+//                    // sum的结果会被缓存，如果依赖的数据没有变化就不会重新执行
+//                    // 计算属性写成函数，默认就调用的是get方法
+//                    get() {
+//                        return this.products.reduce((prev, next) => {
+//                            // 当前没被选中就不加
+//                            if(!next.isSelected) return prev;
+//                            return prev + next.productPrice*next.productCount
+//                        }, 0)
+//                    }
+//                }
+            // 同上一样 页面获取时就不能用方法执行的方式来获取
+            sum() {
+                return this.products.reduce((prev, next) => {
+                    // 当前没被选中就不加
+                    if (!next.isSelected) return prev;
+                    return prev + next.productPrice * next.productCount
+                }, 0);
+            }
+        },
+        methods: {
+//            sum() {
+//                return this.products.reduce((prev, next) => {
+//                    // 当前没被选中就不加
+//                    if(!next.isSelected) return prev;
+//                    return prev + next.productPrice*next.productCount
+//                }, 0);
+//            },
+//            checkAll() {
+//                this.selectAll = this.products.every(item => item.isSelected);
+//            },
+//            change() { //this->当前vm实例
+//                // 根据当前自己的状态设置其他的状态
+//                this.products.forEach(item => item.isSelected = this.selectAll);
+//            },
+            remove(p) { // p代表当前要删除的项
+                this.products = this.products.filter(item => item !== p);
+            },
+            getData() { // 初始化方法
+                axios.get('carts.json').then(res => { // 成功的回调
+                    // console.log(res);
+                    this.products = res.data;
+                    // 数据获取完成后给selectAll赋默认值
+//                    this.checkAll();
+                }, err => { // 失败的回调
+                    console.log(err);
+                });
+            }
+        },
+        data: {
+            products: [],
+        }
+    });
+</script>
+</body>
+</html>
