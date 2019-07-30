@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        [v-cloak]{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" v-cloak="">
+    <!-- moustache 小胡子语法 表达式 赋值 取值 三元 -->
+    {{msg}}
+    <input type="checkbox" v-model="a">
+    <br>
+    爱好：<input  type="checkbox" v-model="b" value="睡觉">睡觉
+    <input  type="checkbox" v-model="b" value="吃饭">吃饭
+    <input  type="checkbox" v-model="b" value="学习">学习
+    <input  type="checkbox" v-model="b" value="逛街">逛街
+    {{b}}
+    <br>
+    <select v-model="c" multiple>
+        <option value="" disabled>请选择</option>
+        <option value="1">你猜</option>
+        <option value="2">我猜</option>
+        <option value="3">不猜</option>
+    </select>
+    {{c}}
+    <br>
+    <input type="radio" v-model="gender" value="男">男
+    <input type="radio" v-model="gender" value="女">女
+    {{gender}}
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 引入vue后会给一个Vue构造函数
+    let vm = new Vue({  // vm 即viewModel
+        el: '#app',   // 告诉vue管理的是哪一个DOM querySelector
+        data: {   // data中的数据会被vm代理
+            msg: 'HelloWorld',  // 可以通过vm.msg获取到相应内容
+            a: 1,
+            b: [],
+            c: [],
+            gender: ''
+        }
+    });  // Object.defineProperty
+</script>
+</body>
+</html>

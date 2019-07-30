@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <ul>
+        <li v-for="(fruit, index) in fruits">
+            {{index+1}}.{{fruit.name}}
+            <ul>
+                <li v-for="(color, cIndex) in fruit.color">
+                    {{index+1}}.{{cIndex+1}}:{{color}}
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            fruits: [
+                {name: '西瓜', color: ['green', 'pink', 'red']},
+                {name: '苹果', color: ['green', 'red']},
+                {name: '香蕉', color: ['yellow']}
+                ]
+        }
+    });  // Object.defineProperty
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <!--表单元素： input checkbox textarea radio select-->
+    <!--vue指令 directive 只是dom上的行间属性 一定的意义实现特殊功能 -->
+    <!--所有指令都以v-开头，有自定义和vue内置两种-->
+    <!--value默认会被vue忽略掉-->
+    {{msg}}<input type="text" v-model="msg">
+
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 引入vue后会给一个Vue构造函数
+    let vm = new Vue({  // vm 即viewModel
+        el: '#app',   // 告诉vue管理的是哪一个DOM querySelector
+        data: {   // data中的数据会被vm代理
+            msg: 'HelloWorld'  // 可以通过vm.msg获取到相应内容
+        }
+    });  // Object.defineProperty
+</script>
+</body>
+</html>

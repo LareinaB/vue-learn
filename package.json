@@ -1,0 +1,24 @@
+{
+  "name": "vue-learn",
+  "version": "1.0.0",
+  "description": "vue深入学习中....",
+  "main": "index.js",
+  "dependencies": {
+    "_vue@2.6.10@vue": "^2.6.10",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LareinaB/vue-learn.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LareinaB/vue-learn/issues"
+  },
+  "homepage": "https://github.com/LareinaB/vue-learn#readme"
+}

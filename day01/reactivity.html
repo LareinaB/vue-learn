@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <!--{{msg.school}}-->
+    {{arr}}
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // vue会循环data中的数据(数据劫持)，依次增加getter,setter方法
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            // msg: {school:''} // 方案一 初始化
+            // msg: {} // 方案二 vm.$set(vm.msg, 'school', 1);
+            // msg: {}, // 方案三  替换原对象
+            arr: [1,2,3,4,5]
+        }
+    });
+    vm.arr.reverse(); // [ 5, 4, 3, 2, 1 ]
+    vm.arr = vm.arr.map(item=>item*3); //[ 3, 6, 9, 12, 15 ]
+    // vm.arr[0] = 100;
+    // vm.arr.length --;
+    // vm.$set(vm.msg, 'school', 1);
+    // vm.msg = {school: 'js', age: 1}
+</script>
+</body>
+</html>

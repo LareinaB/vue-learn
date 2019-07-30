@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--所有绑定的事件都必须是全局的 必须加括号不然不能执行-->
+    <!--<div onclick="fn()">点我啊</div>-->
+    <div id="app">
+        <div v-on:mousedown="fn">点我啊</div>
+    </div>
+    <script src="../node_modules/vue/dist/vue.js"></script>
+    <script>
+
+        let vm = new Vue({
+            el: '#app',
+            data: { // 一般都放数据 methods和data中的数据和方法会全部放到vm上，名字不能冲突，this都是指向实例
+
+            },
+            methods: { // 放方法
+                fn(){alert(1)}
+            }
+        });
+    </script>
+</body>
+</html>

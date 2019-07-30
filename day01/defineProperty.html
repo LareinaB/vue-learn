@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<script>
+    let obj = {},
+    temp = {};
+    Object.defineProperty(obj, 'name', {
+//        configurable: false, // 是否可配置
+//        writable: false,  // 是否可写
+//        enumerable: false, // 是否可枚举
+//        value: 1,
+        get : function () { // 获取obj的name属性会触发
+            // return 1;
+            return temp['name'];
+        },
+        set : function (value) { // 给obj.name设置值会触发get方法
+            // console.log(value);
+            // obj.name = value;  // 会形成死循环
+            temp['name'] = value; // 用临时对象来防止死循环
+            input.value = value; // 改变输入框的内容
+        }
+    });
+    // 页面加载时调用get方法
+    input.value = obj.name;
+    // 输入框值发生变化 调用set方法
+    input.addEventListener('input', function(){
+        obj.name = this.value;
+    });
+
+
+</script>
+</body>
+</html>
