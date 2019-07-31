@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .x{
+            background: lightblue;
+        }
+        .y{
+            font-size: 30px;
+        }
+        .z{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--class绑定的样式和:class绑定的不冲突-->
+    <!--1、{className: isActive}-->
+    <div class="x" :class="{z:true, y: false}">嘻嘻嘻</div>
+    <!--2、[] 数组绑定 可以嵌套对象-->
+    <div class="x" :class="[class1, class2, {z:true}]">哈哈哈</div>
+    <!--隔行变色-->
+    <div v-for="(a, index) in 10" :class="{x: index%2}">{{a}}</div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            class1: 'x',
+            class2: 'y'
+        }
+    });
+</script>
+</body>
+</html>

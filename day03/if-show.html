@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <button @click="cut=!cut">点击</button>
+    <template v-if="cut">
+        <label for="reg">注册</label>
+        <input id="reg" type="text" key="1">
+    </template>
+    <template v-else>
+        <label for="log">登录</label>
+        <input id="log" type="text" key="2">
+    </template>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            cut: true
+        }
+    });
+</script>
+</body>
+</html>

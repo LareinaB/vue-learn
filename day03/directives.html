@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button v-color="back">变色</button>
+    <div v-drag class="box"></div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        directives: {
+            drag(el){
+
+                el.onmousedown = function (e) {
+                    var disx = e.pageX - el.offsetLeft;
+                    var disy = e.pageY - el.offsetTop;
+                    document.onmousemove = function (e) {
+                        el.style.marginLeft = (e.pageY-disx)+'px';
+                        el.style.marginTop = (e.pageY-disy)+'px';
+                    };
+                    document.onmouseup = function () {
+                        document.onmousemove = document.onmouseup = null;
+                    };
+                    e.preventDefault();
+                }
+            },
+            color(el, bindings){ // el指代的是要操作的DOM
+                el.style.background = bindings.value;
+            }
+        },
+        el: '#app',
+        data: {
+            back: 'red'
+        }
+    });
+</script>
+</body>
+</html>

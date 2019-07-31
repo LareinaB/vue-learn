@@ -5,7 +5,7 @@
 //     dataType:''
 // });
 
-function ajax({url='', type='get', dataType='json'}) {
+function ajax({url='', type='post', dataType='json'}) {
     return new Promise((resolve, reject)=>{
         let xhr = new XMLHttpRequest;
         xhr.open(type, url, true);

@@ -126,7 +126,7 @@
                 this.products = this.products.filter(item => item !== p);
             },
             getData() { // 初始化方法
-                axios.get('carts.json').then(res => { // 成功的回调
+                axios.get('carts.json?id=123').then(res => { // 成功的回调
                     // console.log(res);
                     this.products = res.data;
                     // 数据获取完成后给selectAll赋默认值
@@ -138,6 +138,7 @@
         },
         data: {
             products: [],
+
         }
     });
 </script>

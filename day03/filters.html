@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{'hello' | myFilter}}
+</div>
+<div id="app1">
+    {{'hello' | myFilter}}
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    Vue.filter('myFilter', (data)=>{return data+' world!';});
+    new Vue({
+        el: '#app',
+    });
+    new Vue({
+        el: '#app1',
+    });
+</script>
+</body>
+</html>

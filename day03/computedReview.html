@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    全选<input type="checkbox" v-model="checkAll"><br>
+    <input type="checkbox" v-for="product in products" v-model="product.isSelected">
+
+    <input type="text" v-model="a">
+    <br>{{tips}}
+    <br>{{msg}}
+    <!--根据输入框的内容算出一个错误信息-->
+
+</div>
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        computed: {
+          checkAll: {
+              get(){ // 返回什么checkAll的值就是什么
+                  return this.products.every((item) => item.isSelected );
+              },
+              set(val){ // 改自己的值影响其他的 val是给checkAll赋值的时候传过来的
+                  this.products.forEach(item => {item.isSelected = val});
+              },
+          },
+          tips(){
+
+            return this.a.length < 6 ? '密码至少6位' : null;
+
+          }
+        },
+        watch: {
+            a(newVal, oldVal){
+
+                setTimeout(function () {
+                    this.msg = newVal.length < 3 ? '密码至少3位' : newVal.length > 6 ? '密码最多6位' : null;
+                }, 500)
+            }
+        },
+        data: {
+            products: [{isSelected: true}, {isSelected: true}, {isSelected: true}],
+            a: '',
+            msg: ''
+        }
+    });
+</script>
+</body>
+</html>

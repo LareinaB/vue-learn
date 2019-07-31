@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+
+    <input type="text" v-model="val">
+    {{fullName}}
+    <!--根据输入框的内容算出一个错误信息-->
+
+</div>
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        computed: {
+            fullName(){
+                return this.fullName = this.firstName + this.val + this.lastName
+            }
+        },
+        watch: {
+            // 没有异步逻辑就不用他，麻烦
+//            val(newVal, oldVal){
+//                this.fullName = this.firstName + newVal + this.lastName
+//            },
+//            firstName(){
+//
+//            },
+//            lastName(){
+//
+//            }
+        },
+        data: {
+            firstName: 'hello',
+            lastName: 'world',
+            val: '',
+        }
+    });
+</script>
+</body>
+</html>

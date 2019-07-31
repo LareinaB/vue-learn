@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--默认有冒泡-->
+    <div @click.capture="parent">parent
+        <div @click="child">child
+            <div @click="grandson">grandson</div>
+        </div>
+    </div>
+    <a href="https://www.baidu.com/" @click="parent">去百度</a>
+    <a href="https://www.baidu.com/" @click.prevent="parent">你再去</a>
+</div>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        methods: {
+            parent(){
+                alert('parent');
+            },
+            child(){
+                alert('child');
+            },
+            grandson(e){
+                alert('grandson');
+                // 阻止冒泡的两种方式
+//                e.cancelBubble = true; // √ IE下
+//                e.stopPropagation(); // √
+            }
+        },
+        data: {
+
+        }
+    });
+</script>
+</body>
+</html>
