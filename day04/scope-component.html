@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <component1></component1>
+    <component2></component2>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 局部组件使用的三部曲
+    // 1、创建组件
+    // 2、注册组件
+    // 3、引用组件
+    let component1 = {
+        template: '<div>{{msg}}</div>',
+        data(){
+           return {msg: '组件2'}
+        }
+    };
+    let component2 = {
+        template: '<div>组件2</div>',
+    };
+    let vm = new Vue({
+        el: '#app',
+        components:{
+            component1,
+            component2
+        },
+        data: {}
+    });
+</script>
+</body>
+</html>

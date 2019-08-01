@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <p ref="message">{{msg}}</p>
+    <div ref="wrap">
+        <div v-for="a in arr" ref="arr">{{a}}</div>
+    </div>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'hello',
+            arr: [1,2,3]
+        },
+        mounted(){
+            // console.log(document.getElementsByTagName('p')[0].innerHTML);
+            console.log(this.$refs.message);
+            console.log(this.$refs.wrap);
+            this.arr = [1,2,3,4,5]; // dom的渲染是异步的
+            this.$nextTick(function () {
+                // 数据变化后想获取真实dom，需要等待页面获取完成后再去获取
+                console.log(this.$refs.wrap.children.length); // 5
+            });
+            console.log(this.$refs.wrap.children.length); // 3
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .mask{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: #ccc;
+            top: 0;
+            left: 0;
+        }
+        .dialog{
+            width: 400px;
+            height: 150px;
+            background: #fff;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <button @click="show=true">弹出</button>
+    <!--如果show的值是true则显示，反之不显示，close对于的函数是点击关闭按钮时触发的函数-->
+    <modal :show="show" @close="()=>show=false"></modal>
+
+    <template id="dialog">
+        <div class="mask" v-show="show">
+            <div class="dialog">
+                <!--这里有bug，模板里没有click事件，但是直接写html代码在组件的template上就可以-->
+                <button @click="closeModal">关闭</button>
+            </div>
+        </div>
+    </template>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let modal = {
+//        template: '#dialog',
+        props: ['show'], // 接收父组件传过来的值
+        methods: {
+            closeModal(){
+                this.$emit('close');
+            }
+        },
+        render(h){
+            const com = Vue.extend({
+                template: '#dialog'
+            });
+            return h(com, {});
+        }
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            show: false
+        },
+//        methods: {
+//            close(){
+//                this.show = false;
+//            }
+//        },
+        components: {
+            modal,
+        }
+    });
+</script>
+</body>
+</html>

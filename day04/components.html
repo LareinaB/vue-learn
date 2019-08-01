@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--分类 页面级组件 一个页面是一个组件-->
+<!--将可复用的部分抽离出来  基础组件-->
+
+<div id="app">
+<my-vue></my-vue>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 一个对象可以看成一个组件
+    Vue.component('my-vue', {
+        template: '<div>{{msg}}</div>',
+        data(){
+            return {msg: 'vue学习'}
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    parent: {{money}} <button @click="lessMoney">少要点</button>
+    <!--m属于子，属性值属于父-->
+    <!--当前组件的属性=父级的值-->
+    <!--刚刚那个事件是父级的，订阅需要在子级做-->
+
+    <child :money="money" @child-msg="moreMoney"></child>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 父传子
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            money: 400,
+        },
+        methods: {
+            moreMoney(val){
+                this.money = val;
+            },
+            lessMoney(){
+                this.money = 200;
+            }
+        },
+        components: {
+            child: {
+                props: ['money'],
+                template: '<div>child: {{money}} <button @click="getMoney">再来点</button></div>',
+                methods: {
+                    getMoney(){ // 触发自己的自定义事件让父组件的方法执行
+                        this.$emit('child-msg', 800);
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

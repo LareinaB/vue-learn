@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    parent: {{money}}
+    <!--m属于子，属性值属于父-->
+    <!--当前组件的属性=父级的值-->
+    <child :money="money"></child>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 父传子
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            money: 100,
+            a: 400
+        },
+        components: {
+            child: {
+                // 会在当前子组件上声明一个m属性，值是父组件的
+                // 数组的形式可以直接取值，但无法校验
+                // props: ['money'], // this.m = money变量 this->child
+                // 对象的形式可以校验
+                props: {
+                    // 子父组件中的属性名不能重复，控制台也会报错
+                    // 父组件的会覆盖子组件的值
+                    // 可以加个default值，不传值的时候就用默认值
+                    money: {
+                        // 判断传递值的类
+                        // 如果不带冒号:，得到的肯定是字符串类型
+                        // 类型不对页面上依旧会显示，但控制台会报类型错误
+                        type: [Number],
+                        // default: 0
+                        required: true,
+                        validator(val){ // 参数是当前传递的值，返回true表示通过
+                            return val > 300;
+                        }
+                    }
+                },
+                template: '<div>child: {{money}}</div>'
+            }
+        }
+    });
+</script>
+</body>
+</html>

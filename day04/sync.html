@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    parent: {{money}} <button @click="lessMoney">少要点</button>
+    <!--<child :money="money" @update:money="val=>this.money=val"></child>-->
+    <child :money.sync="money"></child>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            money: 400,
+        },
+        methods: {
+            lessMoney(){
+                this.money = 200;
+            }
+        },
+        components: {
+            child: {
+                props: ['money'],
+                template: '<div>child: {{money}} <button @click="getMoney">再来点</button></div>',
+                methods: {
+                    getMoney(){ // 触发自己的自定义事件让父组件的方法执行
+                        this.$emit('update:money', 800);
+                    }
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--<div>parent-->
+        <!--<div>child-->
+            <!--<div>grandson</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <parent>
+        <child>
+            <grandson></grandson>
+        </child>
+    </parent>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let grandson = {
+            template: `<div>grandson</div>`
+        },
+        child = {
+            template: `<div>child<grandson></grandson></div>`,
+            components:{
+                grandson
+            }
+        },
+        parent = {
+        template: `<div>parent<child></child></div>`,
+        components: {
+            child
+        }
+    };
+    let vm = new Vue({
+        el: '#app',
+        components:{
+            parent,
+        },
+        data: {}
+    });
+
+</script>
+</body>
+</html>
