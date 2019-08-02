@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <modal>
+        <p slot="content">确认删除吗</p>
+        <h1 slot="title" @click="fn">是否删除</h1>
+    </modal>
+</div>
+<template id="modal">
+    <div>
+        <slot name="title">这是默认标题</slot>
+        <slot name="content">这是默认内容</slot>
+        <slot name="default">原先默认的内容</slot>
+    </div>
+</template>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let modal = {
+        template: '#modal',
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {
+            fn(){
+                alert(1)
+            }
+        },
+        components: {
+            modal
+        }
+    });
+</script>
+</body>
+</html>

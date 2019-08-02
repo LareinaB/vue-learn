@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <panel :type="type"></panel>
+    <panel type="primary" @say-title="sayTitle">
+        <div slot="head">这是标题部分</div>
+        <div slot="body">这是内容部分
+            <p>组件的属性传递</p>
+            <p>slot的用法</p>
+            <p>ref的用法</p>
+            <p>nextTick的用法</p>
+        </div>
+        <div>作者:lulu</div>
+    </panel>
+</div>
+<template id="panel">
+    <div class="panel" :class="[color]">
+        <div class="panel-heading" ref="head">
+            <slot name="head"></slot>
+        </div>
+        <div class="panel-body">
+            <slot name="body"></slot>
+        </div>
+        <div class="panel-footer">
+            <slot>匿名</slot>
+            <button @click="say">点我弹标题</button>
+        </div>
+    </div>
+</template>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let panel = {
+        template: '#panel',
+        computed: {
+            color(){
+                return 'panel-' + this.type
+            }
+        },
+        data(){
+            return {title : ''}
+        },
+        methods: {
+            say(){
+                this.$emit('say-title', this.$refs.head.innerText)
+            }
+        },
+        props: { // 子组件不能更改父组件的属性
+            type: String,
+            default: 'default'
+        },
+
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            type: 'default'
+        },
+        methods: {
+            sayTitle(title){
+                alert(title)
+            }
+        },
+        components: {
+            panel
+        }
+    });
+</script>
+</body>
+</html>

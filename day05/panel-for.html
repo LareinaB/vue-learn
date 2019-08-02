@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<div id="app">
+    <panel :type="type"></panel>
+    <panel :type="article.type" @say-title="sayTitle" v-for="(article, index) in articles" :key="index">
+        <div slot="head">{{article.title}}</div>
+        <div slot="body">{{article.content}}
+            <p>组件的属性传递</p>
+            <p>slot的用法</p>
+            <p>ref的用法</p>
+            <p>nextTick的用法</p>
+        </div>
+        <div v-if="article.author">{{article.author}}</div>
+    </panel>
+</div>
+<template id="panel">
+    <div class="panel" :class="[color]">
+        <div class="panel-heading" ref="head">
+            <slot name="head"></slot>
+        </div>
+        <div class="panel-body">
+            <slot name="body"></slot>
+        </div>
+        <div class="panel-footer">
+            <slot>匿名</slot>
+            <button @click="say">点我弹标题</button>
+        </div>
+    </div>
+</template>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    let panel = {
+        template: '#panel',
+        computed: {
+            color(){
+                return 'panel-' + this.type
+            }
+        },
+        data(){
+            return {title : ''}
+        },
+        methods: {
+            say(){
+                this.$emit('say-title', this.$refs.head.innerText)
+            }
+        },
+        props: { // 子组件不能更改父组件的属性
+            type: String,
+            default: 'default'
+        },
+
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            type: '',
+            articles: [
+                {type: 'primary', title: 'vue', content: '这是vue的文章', author: '作者: lulu'},
+                {type: 'warning', title: 'react', content: '这是react的文章'},
+                {type: 'danger', title: 'angular', content: '这是angular的文章'}
+            ]
+        },
+        methods: {
+            sayTitle(title){
+                alert(title)
+            }
+        },
+        components: {
+            panel
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <router-link to="/home">首页</router-link>
+    <router-link to="/detail">详情</router-link>
+    <router-view></router-view>
+</div>
+<template id="detail">
+    <div>详情页
+        <router-link to="/detail/profile">个人中心</router-link>
+        <router-link to="/detail/about">关于</router-link>
+        <router-view></router-view>
+    </div>
+</template>
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+    let home = {template: '<div>首页</div>'};
+    let detail = {template: '#detail'};
+    let profile = {template: '<div>个人中心</div>'};
+    let about = {template: '<div>关于</div>'};
+    let routes = [
+        {
+            path: '/', // 默认
+            component: home
+        },
+        {
+            path: '/home',
+            component: home
+        },
+        {
+            path: '/detail',
+            component: detail,
+            children: [// 子路由的路径不能写/带/表示一级路由
+                {path: 'profile', component: profile},
+                {path: 'about', component: about}
+            ]
+        },
+     ];
+    let router = new VueRouter({
+        routes
+    });
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router
+    });
+</script>
+</body>
+</html>

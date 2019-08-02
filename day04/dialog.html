@@ -33,7 +33,8 @@
         <div class="mask" v-show="show">
             <div class="dialog">
                 <!--这里有bug，模板里没有click事件，但是直接写html代码在组件的template上就可以-->
-                <button @click="closeModal">关闭</button>
+                <!--因为这里的方法触发的是父级的，不是自己的-->
+                <button @click="close">关闭</button>
             </div>
         </div>
     </template>
@@ -61,11 +62,11 @@
         data: {
             show: false
         },
-//        methods: {
-//            close(){
-//                this.show = false;
-//            }
-//        },
+        methods: {
+            close(){
+                this.show = false;
+            }
+        },
         components: {
             modal,
         }

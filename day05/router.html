@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!-- vue自带的全局组件 注册完组件之后把内容渲染到页面-->
+    <!--4、把内容渲染到页面-->
+    <router-link to="/home" tag="a">首页</router-link>
+    <router-link to="/list">列表</router-link>
+    <router-view></router-view>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<!--必须放在vue后面-->
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+    let home = {
+        template: '<div>首页</div>'
+    };
+    let list = {
+        template: '<div>列表</div>'
+    };
+    let routes = [ // 映射表 页面级组件 一个页面就是一个组件
+        {path: '/home', component: home},
+        {path: '/list', component: list}
+    ];
+    let router = new VueRouter({ // 引入vue-router自带VueRouter类
+        // 映射表注册
+        routes,
+        mode: 'history' // h5模式
+    });
+    let vm = new Vue({
+        el: '#app',
+        // 路由注册
+        router,
+        data: {}
+    });
+</script>
+</body>
+</html>

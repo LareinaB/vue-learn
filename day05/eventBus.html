@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <brother1></brother1>
+    <brother2></brother2>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script>
+    // 发布订阅的执行者应该是同一个才能成功
+    let eventBus = new Vue();
+    let brother1 = {
+        template: '<div>{{color}} <button  <button @click="change">变绿</button></div>',
+        data() {
+            return {color: '绿色', old: '绿色'};
+        },
+        created() {
+            // 组件1监听
+            eventBus.$on('changeRed', (val) => { // 页面一加载，组件1长一个耳朵来监听
+                this.color = val;
+            });
+        },
+        methods: {
+            change() {
+                // 组件1发布
+                eventBus.$emit('changeGreen', this.old);
+            }
+        }
+    };
+    let brother2 = {
+        template: '<div>{{color}} <button @click="change">变红</button></div>',
+        data() {
+            return {color: '红色', old: '红色'};
+        },
+        created() {
+            // 组件2监听
+            eventBus.$on('changeGreen', (val) => {
+                this.color = val;
+            });
+        },
+        methods: {
+            change() {
+                // 组件2发布
+                eventBus.$emit('changeRed', this.old);
+            }
+        }
+    };
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        components: {
+            brother1,
+            brother2
+        }
+    });
+</script>
+</body>
+</html>

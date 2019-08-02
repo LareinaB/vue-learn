@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <router-link to="/home">去列表</router-link>
+    <router-link to="/list">去首页</router-link>
+    <router-view></router-view>
+</div>
+
+<script src="../node_modules/vue/dist/vue.js"></script>
+<script src="../node_modules/vue-router/dist/vue-router.js"></script>
+<script>
+    let home = {
+        template: '<div>home<button @click="toList">去列表</button></div>',
+        methods: {
+            toList() {
+                this.$router.push('/list');  // 强制跳转路径
+                //this.$router.replace('/list'); // 路由替换，会把当前的替换掉
+            }
+        }
+    };
+    let list = {
+        template: '<div>list<button @click="toHome">去首页</button></div>',
+        methods: {
+            toHome() {
+                this.$router.go(-1); // 返回上一级
+            }
+        }
+    };
+    let routes = [
+        {path: '', component: home}, // 默认展示页面
+        {path: '/home', component: home},
+        {path: '/list', component: list},
+        // {path: '*', component: home},// 都匹配不到的时候
+        {path: '*', redirect: '/home'} // 组件也要切换 404的时候
+    ];
+    let router = new VueRouter({
+        routes
+    });
+    let vm = new Vue({
+        el: '#app',
+        data: {},
+        router // 每个组件都会有$router(存方法) $route(存属性)
+
+    });
+</script>
+</body>
+</html>
