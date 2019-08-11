@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ed30d36-679e-495f-9dff-de04b3f37a5d" name="Default Changelist" comment="day03 todo watch监听localStorage">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/ECMAScript.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day06/.babelrc" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day06/package.json" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day06/src/App.vue" />
@@ -14,11 +12,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/2.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/3.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/LIS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vue详解.iml" afterPath="$PROJECT_DIR$/.idea/vue详解.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day01/HelloWorld.html" afterPath="$PROJECT_DIR$/day01/HelloWorld.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/day02/promise-ajax.js" afterPath="$PROJECT_DIR$/day02/promise-ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,11 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/day06/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="promise-ajax.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day02/promise-ajax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -220,7 +225,7 @@
             <path>
               <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="day01" type="462c0819:PsiDirectoryNode" />
+              <item name="day02" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
@@ -334,7 +339,7 @@
       <workItem from="1565425663438" duration="3872000" />
       <workItem from="1565429679455" duration="11198000" />
       <workItem from="1565445615441" duration="620000" />
-      <workItem from="1565493091118" duration="3126000" />
+      <workItem from="1565493091118" duration="3200000" />
     </task>
     <task id="LOCAL-00001" summary="vue初识day01，一些常用指令">
       <created>1564445939824</created>
@@ -371,11 +376,18 @@
       <option name="project" value="LOCAL" />
       <updated>1564744378051</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated里面不能更改数据验证">
+      <created>1565496278950</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565496278950</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169041000" />
+    <option name="totallyTimeSpent" value="169115000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1490" y="11" width="1365" height="904" extended-state="0" />
@@ -384,9 +396,9 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24717408" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28645834" sideWeight="0.5109269" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.5026375" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2465582" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24609375" sideWeight="0.49736246" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28645834" sideWeight="0.4890731" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -414,7 +426,8 @@
     <MESSAGE value="day03 todo watch监听localStorage" />
     <MESSAGE value="day05子父组件传值 弹出框案例" />
     <MESSAGE value="day05 组件传值，路由，promise" />
-    <option name="LAST_COMMIT_MESSAGE" value="day05 组件传值，路由，promise" />
+    <MESSAGE value="updated里面不能更改数据验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated里面不能更改数据验证" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -559,13 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="121" column="17" lean-forward="false" selection-start-line="121" selection-start-column="17" selection-end-line="121" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day02/promise-ajax.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -721,6 +727,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day02/promise-ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>

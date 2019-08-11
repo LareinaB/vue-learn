@@ -12,13 +12,15 @@ function ajax({url='', type='post', dataType='json'}) {
         xhr.responseType = dataType;
         xhr.onload = function () { // onload===xhr.readState=4&&xhr.status=200
             if(xhr.status === 200){
-                (xhr.response);
+                resolve(xhr.response);
             }
         };
         xhr.onerror = function (err) {
           reject(err);
         };
         xhr.send();
+    }).then((data)=>{}, (err)=>{
+
     })
 }
 // ajax({url:'carts.json'}).then(()=>{
