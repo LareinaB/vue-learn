@@ -4,12 +4,12 @@
   "description": "vue深入学习中....",
   "main": "index.js",
   "dependencies": {
-    "_vue@2.6.10@vue": "^2.6.10",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "bootstrap": "3.3.7",
+    "axios": "0.19.0",
+    "vue-router": "2.0.0"
   },
   "devDependencies": {
-    "bootstrap": "3.3.7",
-    "axios": "0.19.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

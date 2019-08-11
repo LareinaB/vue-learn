@@ -33,6 +33,7 @@
     <input type="radio" v-model="gender" value="男">男
     <input type="radio" v-model="gender" value="女">女
     {{gender}}
+    <input type="text" v-model="val">
 </div>
 
 <script src="../node_modules/vue/dist/vue.js"></script>
@@ -45,9 +46,23 @@
             a: 1,
             b: [],
             c: [],
-            gender: ''
+            gender: '',
+            val: 222
+        },
+        // created() {
+        //     this.val = 789456;
+        // },
+        beforeUpdate(){
+        //    this.val = 123456;
+            console.log("beforeUpdate");
+        },
+        updated(){
+            // this.val = "xixixi";
+            console.log("update");
         }
     });  // Object.defineProperty
+
+
 </script>
 </body>
 </html>
