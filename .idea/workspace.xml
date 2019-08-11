@@ -339,7 +339,7 @@
       <workItem from="1565425663438" duration="3872000" />
       <workItem from="1565429679455" duration="11198000" />
       <workItem from="1565445615441" duration="620000" />
-      <workItem from="1565493091118" duration="3200000" />
+      <workItem from="1565493091118" duration="3241000" />
     </task>
     <task id="LOCAL-00001" summary="vue初识day01，一些常用指令">
       <created>1564445939824</created>
@@ -383,11 +383,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565496278950</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Promise封装ajax复习 then里面触发相应的回调函数">
+      <created>1565496358592</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1565496358592</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169115000" />
+    <option name="totallyTimeSpent" value="169156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1490" y="11" width="1365" height="904" extended-state="0" />
@@ -427,7 +434,8 @@
     <MESSAGE value="day05子父组件传值 弹出框案例" />
     <MESSAGE value="day05 组件传值，路由，promise" />
     <MESSAGE value="updated里面不能更改数据验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated里面不能更改数据验证" />
+    <MESSAGE value="Promise封装ajax复习 then里面触发相应的回调函数" />
+    <option name="LAST_COMMIT_MESSAGE" value="Promise封装ajax复习 then里面触发相应的回调函数" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
