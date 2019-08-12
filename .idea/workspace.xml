@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ed30d36-679e-495f-9dff-de04b3f37a5d" name="Default Changelist" comment="贝壳笔试 emmmm">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/111.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/1111.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/222.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/3333.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/贝壳笔试/bubble.js" />
+    <list default="true" id="2ed30d36-679e-495f-9dff-de04b3f37a5d" name="Default Changelist" comment="头条笔试 emmmm">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/.babelrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/App.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/components/Home.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/components/List.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/plugin/notify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/plugin/notify.vue" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/src/router/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/day07/webpack.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/笔试/同构词.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/1.js" afterPath="$PROJECT_DIR$/笔试/贝壳1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/11.html" afterPath="$PROJECT_DIR$/笔试/11.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/111.js" afterPath="$PROJECT_DIR$/笔试/头条111.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/1111.js" afterPath="$PROJECT_DIR$/笔试/头条1111.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/2.js" afterPath="$PROJECT_DIR$/笔试/贝壳2.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/222.js" afterPath="$PROJECT_DIR$/笔试/头条222.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/3.js" afterPath="$PROJECT_DIR$/笔试/贝壳3.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/3333.js" afterPath="$PROJECT_DIR$/笔试/头条3333.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/LIS.js" afterPath="$PROJECT_DIR$/笔试/LIS.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/贝壳笔试/bubble.js" afterPath="$PROJECT_DIR$/笔试/bubble.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,14 +37,57 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day07/src/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#61#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day07/src/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/day07/src/plugin/notify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notify.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/day07/src/plugin/notify.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="vue" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="vue" />
       </list>
     </option>
   </component>
@@ -44,12 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day04/scope-component.html" />
-        <option value="$PROJECT_DIR$/day04/transclude-component.html" />
-        <option value="$PROJECT_DIR$/day04/parent-child.html" />
-        <option value="$PROJECT_DIR$/day04/emit-on.js" />
-        <option value="$PROJECT_DIR$/day04/child-parent.html" />
-        <option value="$PROJECT_DIR$/day04/sync.html" />
         <option value="$PROJECT_DIR$/day05/slot.html" />
         <option value="$PROJECT_DIR$/day04/dialog.html" />
         <option value="$PROJECT_DIR$/day05/template.html" />
@@ -88,13 +141,19 @@
         <option value="$PROJECT_DIR$/day06/src/main.js" />
         <option value="$PROJECT_DIR$/day07/package.json" />
         <option value="$PROJECT_DIR$/贝壳笔试/bubble.js" />
-        <option value="$PROJECT_DIR$/day07/src/App.vue" />
-        <option value="$PROJECT_DIR$/day07/src/main.js" />
         <option value="$PROJECT_DIR$/贝壳笔试/222.js" />
         <option value="$PROJECT_DIR$/贝壳笔试/11.html" />
         <option value="$PROJECT_DIR$/贝壳笔试/111.js" />
         <option value="$PROJECT_DIR$/贝壳笔试/3333.js" />
         <option value="$PROJECT_DIR$/贝壳笔试/1111.js" />
+        <option value="$PROJECT_DIR$/day07/src/components/List.vue" />
+        <option value="$PROJECT_DIR$/day07/src/components/Home.vue" />
+        <option value="$PROJECT_DIR$/笔试/同构词.js" />
+        <option value="$PROJECT_DIR$/day07/src/router/index.js" />
+        <option value="$PROJECT_DIR$/day07/src/main.js" />
+        <option value="$PROJECT_DIR$/day07/src/plugin/notify.vue" />
+        <option value="$PROJECT_DIR$/day07/src/App.vue" />
+        <option value="$PROJECT_DIR$/day07/src/plugin/notify.js" />
       </list>
     </option>
   </component>
@@ -121,10 +180,9 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1625" />
-    <option name="y" value="-17" />
-    <option name="width" value="961" />
-    <option name="height" value="920" />
+    <option name="x" value="1460" />
+    <option name="width" value="1365" />
+    <option name="height" value="905" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -190,7 +248,7 @@
             <path>
               <item name="vue-learn" type="b2602c69:ProjectViewProjectNode" />
               <item name="vue-learn" type="462c0819:PsiDirectoryNode" />
-              <item name="贝壳笔试" type="462c0819:PsiDirectoryNode" />
+              <item name="笔试" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -240,26 +298,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.1111.js">
-    <configuration name="1111.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="1111.js" working-dir="$PROJECT_DIR$/贝壳笔试" />
-    <configuration name="111.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="111.js" working-dir="$PROJECT_DIR$/贝壳笔试" />
-    <configuration name="2.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/贝壳笔试/2.js" working-dir="$PROJECT_DIR$" />
-    <configuration name="3333.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="3333.js" working-dir="$PROJECT_DIR$/贝壳笔试" />
-    <configuration name="bubble.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="bubble.js" working-dir="$PROJECT_DIR$/贝壳笔试" />
+  <component name="RunManager" selected="Node.js.同构词.js">
+    <configuration name="1111.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/笔试/头条1111.js" working-dir="$PROJECT_DIR$/笔试" />
+    <configuration name="111.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/笔试/头条111.js" working-dir="$PROJECT_DIR$/笔试" />
+    <configuration name="3333.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/笔试/头条3333.js" working-dir="$PROJECT_DIR$/笔试" />
+    <configuration name="同构词.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="同构词.js" working-dir="$PROJECT_DIR$/笔试" />
+    <configuration name="bubble.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="$PROJECT_DIR$/笔试/bubble.js" working-dir="$PROJECT_DIR$/笔试" />
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.2.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.bubble.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.111.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.1111.js" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.3333.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.bubble.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.111.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.1111.js" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.3333.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.同构词.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.1111.js" />
-        <item index="1" class="java.lang.String" itemvalue="Node.js.3333.js" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.111.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.bubble.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.2.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.同构词.js" />
+        <item index="1" class="java.lang.String" itemvalue="Node.js.1111.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.3333.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.111.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.bubble.js" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +351,7 @@
       <workItem from="1565425663438" duration="3872000" />
       <workItem from="1565429679455" duration="11198000" />
       <workItem from="1565445615441" duration="620000" />
-      <workItem from="1565493091118" duration="19122000" />
+      <workItem from="1565493091118" duration="29048000" />
     </task>
     <task id="LOCAL-00001" summary="vue初识day01，一些常用指令">
       <created>1564445939824</created>
@@ -358,11 +416,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565496649155</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="头条笔试 emmmm">
+      <created>1565570282712</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1565570282712</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185037000" />
+    <option name="totallyTimeSpent" value="194963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1432" y="-8" width="1456" height="916" extended-state="6" />
@@ -370,14 +435,14 @@
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18124118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820513" sideWeight="0.51622003" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820513" sideWeight="0.5190409" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24609375" sideWeight="0.49736246" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820513" sideWeight="0.48377997" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2820513" sideWeight="0.4809591" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.49717912" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.49435824" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -404,7 +469,8 @@
     <MESSAGE value="Promise封装ajax复习 then里面触发相应的回调函数" />
     <MESSAGE value="webpack的插件之旅，webpack，webpack-dev-server需要在package.json的scripts下配置&#10;其余插件在webpack.config.js中配置，必须有入口文件和output文件，配置完需要导出，其中html解析器跟vue解析器都需要在plugins属性下配置一个实例才能使用" />
     <MESSAGE value="贝壳笔试 emmmm" />
-    <option name="LAST_COMMIT_MESSAGE" value="贝壳笔试 emmmm" />
+    <MESSAGE value="头条笔试 emmmm" />
+    <option name="LAST_COMMIT_MESSAGE" value="头条笔试 emmmm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -424,49 +490,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day05/parent-childMethod.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="28" column="18" lean-forward="false" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day03/watch-computed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day03/todoList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day03/todo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="36" column="22" lean-forward="true" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day04/transclude-component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day05/router-transition.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day02/cart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -550,31 +573,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2.html" />
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/3.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/LIS.js">
+    <entry file="file://$PROJECT_DIR$/笔试/LIS.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
@@ -630,14 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day07/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day07/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -654,22 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/222.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day07/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/day02/promise-ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -678,15 +653,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/day07/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/bubble.js">
+    <entry file="file://$PROJECT_DIR$/笔试/bubble.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
@@ -694,7 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/11.html">
+    <entry file="file://$PROJECT_DIR$/笔试/11.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
@@ -702,26 +669,134 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/1111.js">
+    <entry file="file://$PROJECT_DIR$/day07/src/components/List.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="100">
+          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/3333.js">
+    <entry file="file://$PROJECT_DIR$/day07/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/贝壳1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/贝壳2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/头条3333.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <caret line="13" column="25" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/贝壳笔试/111.js">
+    <entry file="file://$PROJECT_DIR$/笔试/头条1111.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="5" column="14" lean-forward="false" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/头条222.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="22" lean-forward="false" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/头条111.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/贝壳3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/笔试/同构词.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day07/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day07/src/components/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day07/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#61#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day07/src/plugin/notify.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day07/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="28" lean-forward="true" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/day07/src/plugin/notify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
           <folding />
         </state>
       </provider>
